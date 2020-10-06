@@ -35,7 +35,7 @@ jobs:
     - name: Checkmarx CxFlow Action
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0
       with:
-        project: ${{REPO_NAME}}-${{ steps.extract_branch.outputs.branch }}
+        project: ${{ env.REPO_NAME }}-${{ steps.extract_branch.outputs.branch }}
         team: '\CxServer\CxFlow\Github\cx-demo'
         checkmarx_url: ${{ secrets.CHECKMARX_URL }}
         checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
