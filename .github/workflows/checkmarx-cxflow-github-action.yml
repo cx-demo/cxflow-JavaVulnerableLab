@@ -37,7 +37,7 @@ jobs:
     
     # Runs the Checkmarx Scan leveraging the latest version of CxFlow - REFER to Action README for list of inputs
     - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0
+      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0-9.x
       with:
         project: ${{ env.REPO_NAME }}-${{ steps.extract_branch.outputs.branch }}
         team: 'CxServer/CxFlow/Github/${{ env.ORG_NAME }}'
