@@ -6,7 +6,7 @@ name: checkmarx-cxflow-github-push
 on:
   push:
     branches: [ checkmarx-cxflow-github-push ]
-  #pull_request:
+  # pull_request:
   #  branches: [ checkmarx-cxflow-github-action ]
 
 jobs:
