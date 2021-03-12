@@ -33,7 +33,9 @@ jobs:
     
     # Extracts the Org name from GitHub's environment variables and stores in another env variable.
     - name: Get the Organization Name
-      run: echo ::set-env name=ORG_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')
+      #run: echo ::set-env name=ORG_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')
+      run: |
+        echo "ORG_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')" >> $GITHUB_ENV
     
     # Runs the Checkmarx Scan leveraging the latest version of CxFlow - REFER to Action README for list of inputs
     - name: Checkmarx CxFlow Action
