@@ -5,7 +5,7 @@ name: checkmarx-cxflow-github-action
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, cx-demo-setupPullScans-1 ]
   #pull_request:
   #  branches: [ master ]
 
@@ -42,7 +42,7 @@ jobs:
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0-9.x
       with:
         project: ${{ env.REPO_NAME }}-${{ steps.extract_branch.outputs.branch }}
-        team: 'CxServer/SP/APAC/${{ env.ORG_NAME }}'
+        team: '/CxServer/SP/APAC/pcs-security.com - 65'
         checkmarx_url: ${{ secrets.CHECKMARX_URL }}
         checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
