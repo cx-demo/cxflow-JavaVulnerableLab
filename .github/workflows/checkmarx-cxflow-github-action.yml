@@ -42,7 +42,7 @@ jobs:
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.1
       with:
         project: ${{ env.REPO_NAME }}-${{ steps.extract_branch.outputs.branch }}
-        # 13-Apr-21: Test
+        # 15-Apr-21: Test
         team: 'CxServer/SP/APAC/${{ env.ORG_NAME }}'
         checkmarx_url: ${{ secrets.CHECKMARX_URL }}
         checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
