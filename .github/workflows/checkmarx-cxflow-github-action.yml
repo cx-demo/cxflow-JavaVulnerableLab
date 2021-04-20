@@ -51,7 +51,7 @@ jobs:
         break_build: false
         scanners: sast
         bug_tracker: Sarif
-        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --severity=Medium
+        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --severity=High --severity=Medium
         
     # Upload the Report for CodeQL/Security Alerts
     - name: Upload SARIF file
