@@ -47,7 +47,7 @@ jobs:
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.1
       with:
         project: ${{ env.REPO_NAME }}-${{ steps.extract_branch.outputs.branch }}-PR
-        team: 'CxServer/SP/APAC/pcs-security.com - 65'
+        team: 'CxServer/SP/APAC/sgcxdemo'
         checkmarx_url: ${{ secrets.CHECKMARX_URL }}   # To be stored in GitHub Secrets.
         checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}  # To be stored in GitHub Secrets.
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}  # To be stored in GitHub Secrets.
@@ -56,4 +56,4 @@ jobs:
         break_build: false
         scanners: sast
         bug_tracker: GITHUBPULL
-        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} --severity=High,Medium
+        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} --severity=High,Medium -checkmarx.scan-preset='Checkmarx Express' -checkmarx.configuration='Default Configuration'
