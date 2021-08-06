@@ -2,7 +2,7 @@
 # A default sarif report is generated, and can be uploaded for CodeQL / Security Alerts Processing
 
 
-name: checkmarx-cxflow-github-action
+name: checkmarx-cxflow-push
 
 on:
   push:
